@@ -1,0 +1,21 @@
+{
+  "name": "sbisec-message2slack",
+  "version": "1.0.0",
+  "description": "SBI証券のお知らせをスクレイピングしてSlackに送信するツール",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "dev": "ts-node src/main.ts"
+  },
+  "dependencies": {
+    "@slack/webhook": "^7.0.5",
+    "dotenv": "^17.2.1",
+    "puppeteer": "^24.16.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  }
+}
