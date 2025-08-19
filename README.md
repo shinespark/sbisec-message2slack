@@ -1,4 +1,4 @@
-# SBI Securities Notification Scraping Tool
+# SBI Securities Messages Scraping Tool
 
 A tool that automatically logs into SBI Securities and scrapes important notifications.
 
@@ -8,6 +8,7 @@ A tool that automatically logs into SBI Securities and scrapes important notific
 - Automatic scraping of notification pages
 - Automatic detection of important notifications
 - Console output of results
+- Slack notification of important notifications
 
 ## Setup
 
@@ -24,7 +25,8 @@ Set the following environment variables:
 ```bash
 # SBI Securities login credentials
 export USER_ID="your_user_id_here"
-export PASSWORD="your_password_here"
+export USER_PASSWORD="your_password_here"
+export SLACK_WEBHOOK_URL="your_slack_webhook_url_here"
 ```
 
 Alternatively, you can create a `.env` file to configure them:
@@ -32,7 +34,8 @@ Alternatively, you can create a `.env` file to configure them:
 ```bash
 # .env file
 USER_ID=your_user_id_here
-PASSWORD=your_password_here
+USER_PASSWORD=your_password_here
+SLACK_WEBHOOK_URL=your_slack_webhook_url_here
 ```
 
 ### 3. Build TypeScript
