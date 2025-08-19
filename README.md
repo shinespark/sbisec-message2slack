@@ -2,6 +2,8 @@
 
 A tool that automatically logs into SBI Securities and scrapes important messages.
 
+<img width="525" alt="slack" src="https://github.com/user-attachments/assets/a1d568f7-feb2-4f84-9e39-978b6fd4885d" />
+
 <img width="600" alt="no_unconfirmed_important_messages!" src="https://github.com/user-attachments/assets/130f2f95-19c0-4cc0-9ada-2906c0e18b71" />
 
 
