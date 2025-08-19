@@ -1,6 +1,9 @@
 # SBI Securities Messages Scraping Tool
 
-A tool that automatically logs into SBI Securities and scrapes important notifications.
+A tool that automatically logs into SBI Securities and scrapes important messages.
+
+<img width="600" alt="no_unconfirmed_important_messages!" src="https://github.com/user-attachments/assets/130f2f95-19c0-4cc0-9ada-2906c0e18b71" />
+
 
 ## Features
 
