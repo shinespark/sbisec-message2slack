@@ -206,7 +206,9 @@ export class SbiSecBrowser {
       .trim() // 行頭・行末の空白・改行を削除
       .replace(/\n\s*\n/g, "\n") // 複数回連続の改行を単一の改行に
       .replace(/\n\s+/g, "\n") // 改行後の行頭空白を削除
-      .replace(/\s+\n/g, "\n"); // 改行前の行末空白を削除
+      .replace(/\s+\n/g, "\n") // 改行前の行末空白を削除
+      .replace(/【ご注意事項】.*$/s, "") // 【ご注意事項】以降をカット
+      .replace(/＜ご連絡先＞.*$/s, ""); // ＜ご連絡先＞以降をカット
   }
 
   async close(): Promise<void> {
