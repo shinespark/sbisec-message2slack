@@ -156,8 +156,6 @@ export class SbiSecBrowser {
         if (message) {
           messages.push(message);
         }
-        // TODO: 開発中は1件でリターン
-        return messages;
       }
       return messages;
     } catch (error) {
