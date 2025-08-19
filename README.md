@@ -1,6 +1,6 @@
 # SBI Securities Messages Scraping Tool
 
-A tool that automatically logs into SBI Securities and scrapes important messages.
+A tool that automatically confirmed and posts them to Slack.
 
 <img width="525" alt="slack" src="https://github.com/user-attachments/assets/a1d568f7-feb2-4f84-9e39-978b6fd4885d" />
 
