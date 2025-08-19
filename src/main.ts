@@ -27,36 +27,14 @@ dotenv.config();
     }
 
     // 重要なお知らせをスクレイピング
-    const messageLinks = await scraper.scrapeMessageLinks();
+    const messageLinks = await scraper.scrapeImportantMessageLinks();
+    if (messageLinks.length === 0) {
+      console.log("未確認の重要なお知らせはありません");
+      return;
+    }
 
-    console.log(messageLinks);
-
-    // // 結果を表示
-    // console.log("\n=== 重要なお知らせ ===");
-    // const importantNotices = notices.filter((notice) => notice.isImportant);
-
-    // if (importantNotices.length === 0) {
-    //   console.log("重要なお知らせはありません");
-    // } else {
-    //   importantNotices.forEach((notice, index) => {
-    //     console.log(`\n${index + 1}. ${notice.date}`);
-    //     console.log(`   タイトル: ${notice.title}`);
-    //     if (notice.content) {
-    //       console.log(`   内容: ${notice.content}`);
-    //     }
-    //     console.log("   ---");
-    //   });
-    // }
-
-    // // すべてのお知らせも表示
-    // console.log("\n=== すべてのお知らせ ===");
-    // notices.forEach((notice, index) => {
-    //   console.log(
-    //     `${index + 1}. [${notice.isImportant ? "重要" : "通常"}] ${
-    //       notice.date
-    //     } - ${notice.title}`
-    //   );
-    // });
+    const messages = await scraper.scrapeImportantMessages(messageLinks);
+    console.log(messages);
   } catch (error) {
     console.error("エラーが発生しました:", error);
   } finally {
